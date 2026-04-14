@@ -317,13 +317,16 @@ import google.generativeai as genai
 * Real-time notifications
 
 ---
-Tech Stack
-Backend: Django (Python)
-Database: SQLite
-Frontend: HTML, CSS, JavaScript
-Email: SMTP (Gmail)
-PDF Generation: ReportLab
-AI Integration: Google Generative AI (Planned)
+# 🛠️ Tech Stack
+* Backend: Django (Python)
+* Database: SQLite
+* Frontend: HTML, CSS, JavaScript
+* Email: SMTP (Gmail)
+* PDF Generation: ReportLab
+* AI Integration: Google Generative AI (Planned)
+  
+---
+
 📂 Project Structure
 easygo/
 │── Tours/
@@ -336,9 +339,12 @@ easygo/
 │── static/
 │── db.sqlite3
 │── manage.py
-⚙️ Installation & Setup
+
+---
+
+# ⚙️ Installation & Setup
 1️⃣ Clone Repository
-git clone https://github.com/your-username/Travela.git
+git clone https://github.com/1179irfatkhan-web/Travela.git
 cd Travela
 2️⃣ Create Virtual Environment
 python -m venv venv
@@ -350,7 +356,10 @@ python manage.py makemigrations
 python manage.py migrate
 5️⃣ Run Server
 python manage.py runserver
-🔐 Environment Setup (Important)
+
+---
+
+# 🔐 Environment Setup (Important)
 
 Update email settings in settings.py:
 
