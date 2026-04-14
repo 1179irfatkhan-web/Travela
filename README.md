@@ -313,12 +313,49 @@ import google.generativeai as genai
 # 🚀 Future Scope
 
 * Payment gateway integration (Razorpay / Stripe)
-* AI-based recommendations
 * Mobile app version
 * Real-time notifications
-* Multi-language support
 
 ---
+Tech Stack
+Backend: Django (Python)
+Database: SQLite
+Frontend: HTML, CSS, JavaScript
+Email: SMTP (Gmail)
+PDF Generation: ReportLab
+AI Integration: Google Generative AI (Planned)
+📂 Project Structure
+easygo/
+│── Tours/
+│   ├── models.py
+│   ├── views.py
+│   ├── admin.py
+│   ├── forms.py
+│
+│── templates/
+│── static/
+│── db.sqlite3
+│── manage.py
+⚙️ Installation & Setup
+1️⃣ Clone Repository
+git clone https://github.com/your-username/Travela.git
+cd Travela
+2️⃣ Create Virtual Environment
+python -m venv venv
+venv\Scripts\activate   # Windows
+3️⃣ Install Dependencies
+pip install -r requirements.txt
+4️⃣ Run Migrations
+python manage.py makemigrations
+python manage.py migrate
+5️⃣ Run Server
+python manage.py runserver
+🔐 Environment Setup (Important)
+
+Update email settings in settings.py:
+
+EMAIL_HOST_USER = "your-email@gmail.com"
+EMAIL_HOST_PASSWORD = "your-app-password"
 
 # 👨‍💻 Author
 
