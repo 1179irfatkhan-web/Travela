@@ -1,0 +1,50 @@
+from django.urls import path
+from . import views
+
+urlpatterns = [
+    path("register/", views.register, name="register"),
+    path("login/", views.login_view, name="login"),
+    path('logout/', views.user_logout, name='logout'),
+    path('', views.home, name='home'),
+    path('about/', views.about, name='about'),
+    path('services/', views.services, name='services'),
+    path('packages/', views.packages, name='packages'),
+    path('package/<int:pk>/', views.package_detail, name='package_detail'),
+    path('download-invoice/<int:booking_id>/', views.download_invoice, name='download_invoice'),
+    path('view-invoice/<int:booking_id>/', views.view_invoice, name='view_invoice'),
+# urls.py
+path('testimonial/', views.testimonial_view, name='testimonial'),
+path('cancellation-invoice/<int:booking_id>/', views.view_cancellation_invoice, name='view_cancellation_invoice'),
+path('download-cancellation-invoice/<int:booking_id>/', views.download_cancellation_invoice, name='download_cancellation_invoice'),
+    path('cancellation-policy/<int:booking_id>/', views.cancellation_policy, name='cancellation_policy'),
+    path('blog/', views.blog, name='blog'),
+    path('destination/', views.destination, name='destination'),
+    path('tour/', views.tour, name='tour'),
+    path('booking/', views.booking, name='booking'),
+    path('booking/<int:pk>/', views.booking_view, name='booking_process'),
+    path('payment/<int:booking_id>/', views.payment_page, name='payment_page'),
+    path('gallery/', views.gallery, name='gallery'),
+    path('guides/', views.guides, name='guides'),
+    path("profile/", views.profile_view, name="profile"),
+    path('profile/edit/', views.edit_profile, name='edit_profile'),
+    path('testimonial/', views.testimonial, name='testimonial'),
+path('testimonial/edit/<int:feedback_id>/', views.edit_testimonial, name='edit_testimonial'),
+path('testimonial/delete/<int:feedback_id>/', views.delete_testimonial, name='delete_testimonial'),
+    path('contact/', views.contact, name='contact'),
+path('api/chatbot/', views.travel_chatbot, name='chatbot_api'),
+    path('subscribe/', views.subscribe, name='subscribe'),
+    path('404/', views.error404, name='error404'),
+path('verify-otp/', views.verify_otp, name='verify_otp'),
+path('forgot-password/', views.forgot_password, name='forgot_password'),
+path('reset-password/', views.reset_password, name='reset_password'),
+# Add this to your urls.py
+path('check-waiting-list/<int:package_id>/', views.check_waiting_list_status, name='check_waiting_list'),
+path('api/package-availability/<int:pk>/', views.check_package_availability, name='check_package_availability'),
+    path('check-availability/', views.check_availability, name='check_availability'),
+    path('my-bookings/', views.my_bookings, name='my_bookings'),
+    path('cancel-booking/<int:booking_id>/', views.cancel_booking, name='cancel_booking'),
+
+    # Admin booking management (for custom actions)
+    path('admin/cancel-booking/<int:booking_id>/', views.admin_cancel_booking, name='admin_cancel_booking'),
+    path('admin/confirm-booking/<int:booking_id>/', views.admin_confirm_booking, name='admin_confirm_booking'),
+]
