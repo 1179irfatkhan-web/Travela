@@ -1736,7 +1736,7 @@ def payment_page(request, booking_id):
             return render(request, 'payment_success.html', {'booking': booking})
 
     # 1. Define the raw UPI URL (This is the "Magic Link" for autofill)
-    upi_id = "arshadpirzada19@okhdfcbank"
+    upi_id = "enter your UPI "
     name = "Travela Tours"
     amount = booking.total_price
     note = f"Booking_{booking.id}"
@@ -1824,7 +1824,7 @@ def delete_testimonial(request, feedback_id):
 # IMPORT YOUR MODELS HERE
 
 # Configure Gemini with your Free API Key
-genai.configure(api_key="AIzaSyCBlVfJwJ52Mjj_nYVVKm0LdoqtFO3wnwg")
+genai.configure(api_key="enter your api key ")
 
 
 # @csrf_exempt
